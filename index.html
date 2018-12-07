@@ -18,21 +18,22 @@
         }
       }    
 	    function step(){
-      	update(c1,costs[0])
-      	update(c2,costs[1])
-      	update(c3,costs[2])
-      	update(h1,have[0])
-     		update(h2,have[1])
-        update(h3,have[2])
-      	update(moneybox,money)
-				money+=(costs[0]+costs[1]+costs[2])
-			}
-			setInterval(step,1000)
+      	update(c1,costs[0]);
+      	update(c2,costs[1]);
+      	update(c3,costs[2]);
+      	update(h1,have[0]);
+        update(h2,have[1]);
+        update(h3,have[2]);
+				money+=(costs[0]+costs[1]+costs[2]);
+				update(moneybox,money);
+				}
     </script>
   </head>
   <body>
 		<p1>You have <span id='moneybox'>0</span> Money</p1>
-		<button onclick='buy(1)'>Building 1<br> You have <span id='h1>1</span> of these. <br> This costs <span id='c1'>10</span> Cash.</button>
-	</body>
+		<button onclick='buy(1)'>Building 1<br> You have <span id='h1'>1</span> of these. <br> This costs <span id='c1'>10</span> Cash.</button>
+		<button onclick='step()'>Click me</button>
+	</body>			
 </html>
 			
+	
