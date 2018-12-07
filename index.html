@@ -17,14 +17,17 @@
           costs[num-1]=Math.round(costs[num-1]*1.2)
         }
       }    
-      update(c1,costs[0])
-      update(c2,costs[1])
-      update(c3,costs[2])
-      update(h1,have[0])
-      update(h2,have[1])
-      update(h3,have[2])
-      update(moneybox,money)
-      
+	    function step(){
+      	update(c1,costs[0])
+      	update(c2,costs[1])
+      	update(c3,costs[2])
+      	update(h1,have[0])
+     		update(h2,have[1])
+        update(h3,have[2])
+      	update(moneybox,money)
+				money+=(costs[0]+costs[1]+costs[2])
+			}
+			setInterval(step,1000)
     </script>
   </head>
   <body>
