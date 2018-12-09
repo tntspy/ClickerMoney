@@ -7,25 +7,22 @@
       var give=[1,4,20]
       var have=[1,0,0]
       
-      function update(set,get) {
-	      document.getElementById(set).innerHTML=get
-      }
-      
       function buy(num) {
         if(money => costs[num-1]){
           have[num-1]+=1
           costs[num-1]=Math.round(costs[num-1]*1.2)
         }
+	      
       }    
       function Step() {
-        update(c1,costs[0]);
-      	update(c2,costs[1]);
-      	update(c3,costs[2]);
-      	update(h1,have[0]);
-        update(h2,have[1]);
-        update(h3,have[2]);
-	      money+=(costs[0]+costs[1]+costs[2]);
-	      update(moneybox,money);
+        document.getElementById("c1").innerHTML = costs[0];
+      	document.getElementById("c2").innerHTML = costs[1];
+				document.getElementById("c3").innerHTML = costs[2];
+				document.getElementById("g1").innerHTML = give[0];
+				document.getElementById("g2").innerHTML = give[1];
+				document.getElementById("g3").innerHTML = give[2];
+				money+=(costs[0]+costs[1]+costs[2]);
+				document.getElementById("moneybox").innerHTML = money;
        }
     </script>
   </head>
